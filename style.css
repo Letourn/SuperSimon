@@ -1,0 +1,47 @@
+#plateau {
+    width : 504px;
+    height : 504px;
+    border : 1px solid black;
+}
+#bleu {
+    border : 1px solid #0074a6;
+    background-color: #00a8d6;
+    width : 250px;
+    height : 250px;
+    float: left;
+}
+#rouge {
+    border : 1px solid #a60000;
+    background-color: #db0000;
+    width : 250px;
+    height : 250px;
+    float: right;
+}
+#jaune {
+    border : 1px solid #baba04;
+    background-color: #f0f000;
+    width : 250px;
+    height : 250px;
+    float: right;
+}
+#vert {
+    border : 1px solid #0074a6;
+    background-color: #00d604;
+    width : 250px;
+    height : 250px;
+    float: left;
+}
+
+#start {
+    width : 500px;
+    height : 100px;
+    background-color : blanchedalmond;
+}
+
+.on {
+    opacity : 1.0;
+}
+
+.off {
+    opacity : 0.2;
+}
