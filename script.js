@@ -11,29 +11,71 @@ let boutonVert = document.getElementById('vert')
 boutonVert.addEventListener('click', allumeVert);
 
 let sequence = [];
-let saisie = null;
-let etape= 0;
-const nbEtapes = 4;
+let saisie = [];
+const nbEtapes = 12;
 
-function generersequence(){
+//Séquence aléatoire
+function genererSequence(){
     for (let i = 0 ; i < nbEtapes ; i++){
         sequence[i] = Math.floor(Math.random()*4);
     }
-    console.tab(sequence)
+    console.table(sequence);
     return sequence
 }
-//Fonction clique sur le boutton
+
+//Fonction qui allume les boutons en fonction de la séquence aléatoire
+function lireSequence() {
+    let temps = 600;
+    for (let i = 0 ; i < nbEtapes ; i++){
+        if (sequence[i] == 0) {
+            setTimeout(allumeBleu, temps);
+        }
+        if (sequence[i] == 1) {
+            setTimeout(allumeJaune, temps);
+        }
+        if (sequence[i] == 2) {
+            setTimeout(allumeVert, temps);
+        }
+        if (sequence[i] == 3) {
+            setTimeout(allumeRouge, temps);
+        }
+        temps = temps + 600;
+    }
+    saisieUser();
+}
+
+//Fonction lecture de la saisie d'utilisateur
+function saisieUser() {
+    for (let i = 0 ; i < nbEtapes ; i++){
+        if (boutonBleu.addEventListener('click', allumeBleu) == true) {
+            saisie[i] = 0
+        }
+        if (boutonJaune.addEventListener('click', allumeJaune) == true) {
+            saisie[i] = 1
+        }
+        if (boutonVert.addEventListener('click', allumeVert) == true) {
+            saisie[i] = 2
+        }
+        if (boutonRouge.addEventListener('click', allumeRouge) == true) {
+            saisie[i] = 3
+        }
+        console.table(saisie);
+    }
+}
+
+//Fonction animation de début de jeu
 function demarrerJeu(){
     document.getElementById('bleu').setAttribute('class', 'off');
     document.getElementById('jaune').setAttribute('class', 'off');
     document.getElementById('rouge').setAttribute('class', 'off');
     document.getElementById('vert').setAttribute('class', 'off');
 
-    setTimeout(allumeBleu, 600);
+    /*setTimeout(allumeBleu, 600);
     setTimeout(allumeJaune, 1100);
     setTimeout(allumeRouge, 1600);
-    setTimeout(allumeVert, 2100);
-    generersequence()
+    setTimeout(allumeVert, 2100);*/
+    genererSequence();
+    setTimeout(lireSequence(), 2600);
 }
 
 //Fonctions allumage des bouttons

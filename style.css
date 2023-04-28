@@ -2,6 +2,7 @@
     width : 504px;
     height : 504px;
     border : 1px solid black;
+    border-radius : 250px
 }
 #bleu {
     border : 1px solid #0074a6;
@@ -9,6 +10,7 @@
     width : 250px;
     height : 250px;
     float: left;
+    border-radius : 250px 0px 0px 0px;
 }
 #rouge {
     border : 1px solid #a60000;
@@ -16,6 +18,7 @@
     width : 250px;
     height : 250px;
     float: right;
+    border-radius : 0px 0px 250px 0px;
 }
 #jaune {
     border : 1px solid #baba04;
@@ -23,17 +26,19 @@
     width : 250px;
     height : 250px;
     float: right;
+    border-radius : 0px 250px 0px 0px;
 }
 #vert {
-    border : 1px solid #0074a6;
+    border : 1px solid #06a600;
     background-color: #00d604;
     width : 250px;
     height : 250px;
     float: left;
+    border-radius : 0px 0px 0px 250px;
 }
 
 #start {
-    width : 500px;
+    width : 506px;
     height : 100px;
     background-color : blanchedalmond;
 }
